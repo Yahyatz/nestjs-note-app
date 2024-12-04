@@ -12,4 +12,9 @@ export class NoteService {
     }
 
 
+    create(title: string) {
+        let note: NoteEntity
+        note.title = title
+        return this.noteRepository.save(note)
+    }
 }
